@@ -1,9 +1,7 @@
 <?php
 
 $singers = ['2pac', 'Drake', 'Jenifer Lopes', 'Alfredo'];
-$numbers = [1, 2, 3, 4, 5];
-sort($numbers);
-var_dump($numbers);
+$numbers = [1, 2, 7, 4, 5];
 
-array_push($singers, "five turn");
-var_dump($singers);
+$randomSinger = array_rand($singers);
+echo "soy el cantante ".$singers[$randomSinger];
