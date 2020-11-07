@@ -7,22 +7,30 @@
  * 5. Search, find and show some elemente inside of array
  */
 
+//functions
+
+function showArray($values){
+    $value = "";
+    //$value = $value.$number
+    foreach ($values as $number){
+        $value.=$number."<br>";
+    }
+    return $value;
+}
+
 $numbersBox = array(1, 2, 33, 41, 5, 62, 7, 8);
 
-foreach ($numbersBox as $numberBox){
-    echo $numberBox."</br>";
-}
+//show number
+echo showArray($numbersBox);
 
 //ascendent order
 
 echo "<hr>";
 echo "In order<br>";
 
-asort($numbersBox);
+sort($numbersBox);
 
-foreach ($numbersBox as $number){
-    echo $number."<br>";
-}
+echo showArray($numbersBox);
 
 //show the length of number variable
 
