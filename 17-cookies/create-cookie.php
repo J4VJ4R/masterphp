@@ -11,4 +11,4 @@ setcookie("mycookie", "value of my cookie");
 setcookie("oneyear", "value of my cookie of 365 days", time()+(60*60*24*365));
 ?>
 
-<a href="see_cookies.php">See cookies</a>
+<a href="delete-cookies.php">Delete my cookies</a>
