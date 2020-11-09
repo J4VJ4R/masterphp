@@ -9,11 +9,12 @@
 
 //functions
 
-function showArray($values){
+function showArray($values)
+{
     $value = "";
     //$value = $value.$number
-    foreach ($values as $number){
-        $value.=$number."<br>";
+    foreach ($values as $number) {
+        $value .= $number . "<br>";
     }
     return $value;
 }
@@ -40,7 +41,18 @@ $lengthNumber = count($numbersBox);
 echo $lengthNumber;
 
 //search some element
-
-echo "<hr>";
-echo "search number 5 and find it <br>";
-echo "The result is in position ".array_search(5, $numbersBox);
+//variables for search
+if (isset($_GET['search'])) {
+    $search = ($_GET["search"]);
+    echo "<hr>";
+    echo "search number 5 and find it <br>";
+//Conditional for existence of search
+    $valueForSearch = array_search($search, $numbersBox);
+    if (!empty($valueForSearch)) {
+        echo "The result is in position " . $valueForSearch;
+    } else {
+        echo "We don't find your search";
+    }
+}else{
+    echo " <hr>"."Enter correct values, the values would be numbers";
+}
