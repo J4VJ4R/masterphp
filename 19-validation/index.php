@@ -12,9 +12,35 @@
 <?php
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
+
     if ($error == "missing data") {
         echo "<h2 style='color: red'>
                 please enter all data
+              </h2>";
+    }
+    if ($error == "name") {
+        echo "<h2 style='color: red'>
+                please enter a name
+              </h2>";
+    }
+    if ($error == "lastname") {
+        echo "<h2 style='color: red'>
+                please enter a lastname
+              </h2>";
+    }
+    if ($error == "age") {
+        echo "<h2 style='color: red'>
+                please enter an age
+              </h2>";
+    }
+    if ($error == "email") {
+        echo "<h2 style='color: red'>
+                please enter an email
+              </h2>";
+    }
+    if ($error == "password") {
+        echo "<h2 style='color: red'>
+                please enter a correct password
               </h2>";
     }
 }

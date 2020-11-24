@@ -9,24 +9,24 @@ if (!empty($_POST['name']) &&
 
     $name = $_POST['name'];
     $lastname = $_POST['lastname'];
-    $age = $_POST['age'];
+    $age = (int) $_POST['age'];
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     // validate name
-    if (!is_string($name) || !preg_match("/[A-Za-z ]+/", $name)){
+    if (!is_string($name) || preg_match("/[0-9]/", $name)){
         $error = "name";
     }
     // validate lastname
-    if (!is_string($lastname) || !preg_match("/[A-Za-z ]+/", $lastname)){
+    if (!is_string($lastname) || preg_match("/[0-9]/", $lastname)){
         $error = "lastname";
     }
     // validate age
-    if (!is_int($age) || filter_var($age, FILTER_VALIDATE_INT)){
+    if (!is_int($age) || !filter_var($age, FILTER_VALIDATE_INT)){
         $error = "age";
     }
     // validate email
-    if (!is_string($email) || filter_var($age, FILTER_VALIDATE_EMAIL)){
+    if (!is_string($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
         $error = "email";
     }
     // validate password
@@ -34,8 +34,9 @@ if (!empty($_POST['name']) &&
         $error = "password";
     }
 
+    /*var_dump($_POST);
     var_dump($error);
-    die();
+    die();*/
 
 } else {
     $error = "missing data";
