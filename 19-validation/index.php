@@ -20,7 +20,7 @@ if (isset($_GET['error'])) {
     }
     if ($error == "name") {
         echo "<h2 style='color: red'>
-                please enter a name
+                please enter a correct name
               </h2>";
     }
     if ($error == "lastname") {
@@ -49,26 +49,26 @@ if (isset($_GET['error'])) {
 <form action="save.php" method="post">
     <label for="name">Name</label>
     <p>
-        <input type="text" name="name"  >
+        <input type="text" name="name"   required="required" pattern="[a-zA-Z ]+">
     </p>
     <label for="lastname">lastname</label>
     <p>
-        <input type="text" name="lastname"  >
+        <input type="text" name="lastname"  required="required" pattern="[a-zA-Z]+">
     </p>
     <label for="age">Age</label>
     <p>
-        <input type="number" name="age"  >
+        <input type="number" name="age"   required="required" pattern="[0-9]+">
     </p>
     <label for="email">email</label>
     <p>
-        <input type="text" name="email" >
+        <input type="email" name="email" required="required" >
     </p>
     <label for="password">Password</label>
     <p>
-        <input type="password" name="password" >
+        <input type="password" name="password"  required="required" minlength="5">
     </p>
     <p>
-        <input type="submit" value="Send">
+        <input type="submit" value="Send" >
     </p>
 </form>
 </body>
