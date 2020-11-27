@@ -40,10 +40,10 @@ if (!empty($_POST['name']) &&
 
 } else {
     $error = "missing data";
-    header("Location:index.php?error=$error");
+    header("Location:exercise1.php?error=$error");
 }
 if ($error != "ok"){
-    header("Location:index.php?error=$error");
+    header("Location:exercise1.php?error=$error");
 }
 ?>
 <!doctype html>
