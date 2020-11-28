@@ -17,25 +17,25 @@
             <h1>Enter your numbers here</h1>
         </div>
 
-        <form action="calculator.php" class="col-12">
+        <form action="calculator.php" class="col-12" method="post">
             <div class="d-flex justify-content-center">
-
-                <label for="number1">Number 1</label>
+                <label for="number1">Number 1: </label>
                 <input type="number" name="number1" required>
-                <label for="number1">Number 2</label>
+                <label for="number1">Number 2: </label>
                 <input type="number" name="number2" required>
             </div>
             <br>
         <div class="col-12 text-center">
 
-            <button type="submit" class="btn btn-primary" name="sum">Sum</button>
-            <button type="submit" class="btn btn-primary" name="sum">Sub</button>
-            <button type="submit" class="btn btn-primary" name="sum">Mul</button>
-            <button type="submit" class="btn btn-primary" name="sum">Div</button>
+            <button type="submit" class="btn btn-primary" name="operator" value="+">Sum</button>
+            <button type="submit" class="btn btn-primary" name="operator" value="-">Sub</button>
+            <button type="submit" class="btn btn-primary" name="operator" value="*">Mul</button>
+            <button type="submit" class="btn btn-primary" name="operator" value="/">Div</button>
         </div>
 
         </form>
 </div>
+
 
 
 <!-- Bootstrap js -->
